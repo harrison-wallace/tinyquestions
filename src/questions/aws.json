@@ -1,0 +1,15 @@
+{
+ "questions": [
+   {
+     "id": 1,
+     "text": "What is the primary storage service in AWS?",
+     "options": ["S3", "EBS", "Glacier", "RDS"],
+     "correctAnswer": "S3"
+   },
+   {
+     "id": 2,
+     "text": "What service is used for serverless computing in AWS?",
+     "correctAnswer": "Lambda"
+   }
+ ]
+}
