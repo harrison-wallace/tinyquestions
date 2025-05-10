@@ -1,46 +1,92 @@
-# Getting Started with Create React App
+# Quiz Navigator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Quiz Navigator is a React-based web application designed to help users practice for certification exams through interactive quizzes. It supports multiple question sets (e.g., Kubernetes and AWS certifications), offers features like timers, hints, and review modes, and includes a statistics page to track performance. The app features a responsive design with light and dark mode support, ensuring usability across devices, including mobile and high-resolution displays like 4K monitors.
 
-In the project directory, you can run:
+### Features
+- **Multiple Question Sets**: Choose from different certification question sets (e.g., Kubernetes, AWS).
+- **Interactive Quizzes**: Answer multiple-choice or open-ended questions with a timer option.
+- **Hints and Explanations**: Access hints and explanations for each question, with links to official documentation.
+- **Review Mode**: Review answers after completing a quiz, including explanations and hints.
+- **Statistics Tracking**: View quiz performance metrics, including average score, completion rate, and recent results.
+- **Dark Mode**: Toggle between light and dark themes, with consistent background styling across the viewport.
+- **Responsive Design**: Centered layout that adapts to various screen sizes, from mobile devices to 4K displays.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Before setting up the project, ensure you have the following installed:
+- **Node.js** (v14 or higher recommended) and **npm** (v6 or higher)
+- A modern web browser (e.g., Chrome, Firefox)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup Instructions
 
-### `npm test`
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd quiz-navigator
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies**:
+   Run the following command to install the required npm packages, including React, React Router, and Tailwind CSS:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. **Run the Development Server**:
+   Start the app in development mode:
+   ```bash
+   npm start
+   ```
+   The app will be available at `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. **Build for Production** (Optional):
+   To create a production build, run:
+   ```bash
+   npm run build
+   ```
+   The optimized build will be generated in the `build/` directory. You can serve it using a static server (e.g., `npx serve -s build`).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Home Screen**:
+   - On the home screen, select a question set (e.g., Kubernetes Certification Questions or AWS Certification Questions).
+   - Click the toggle button in the top-right corner to switch between light and dark modes.
 
-### `npm run eject`
+2. **Quiz Settings**:
+   - After selecting a question set, configure the quiz:
+     - Enable/disable question shuffling.
+     - Set an optional timer (e.g., 10, 20, or 30 minutes).
+   - Click "Start Quiz" to begin.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Taking the Quiz**:
+   - Answer questions using multiple-choice options or text input for open-ended questions.
+   - Use the "Show Hint" button to view hints, which may include links to official documentation.
+   - Navigate between questions using "Previous" and "Next" buttons.
+   - If a timer is set, the quiz auto-submits when time runs out.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Quiz Results**:
+   - After submitting, view your score and options to:
+     - Review answers with explanations.
+     - Restart the quiz.
+     - Return to the home screen.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. **Statistics**:
+   - Access the statistics page from the home screen to view:
+     - Average score, completion rate, and total attempts.
+     - Recent quiz results (up to 5).
+   - Clear statistics if needed.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+- **`src/`**: Contains the source code.
+  - **`components/`**: React components (e.g., `Home.tsx`, `Statistics.tsx`).
+  - **`ThemeContext.tsx`**: Manages light/dark mode state and toggling.
+  - **`questions/`**: JSON files for question sets (e.g., `cka.json`, `aws.json`).
+  - **`index.css`**: Global styles, including viewport background and Tailwind directives.
+- **`public/`**: Static assets, including `index.html`.
+- **`tailwind.config.js`**: Tailwind CSS configuration, including safelisted classes.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.

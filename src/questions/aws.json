@@ -4,12 +4,21 @@
      "id": 1,
      "text": "What is the primary storage service in AWS?",
      "options": ["S3", "EBS", "Glacier", "RDS"],
-     "correctAnswer": "S3"
+     "correctAnswer": "S3",
+     "hint": {
+       "text": "The primary storage service in AWS is designed for object storage, widely used for backups and static assets.",
+       "link": "https://aws.amazon.com/s3/"
+     },
+     "explanation": "Amazon S3 (Simple Storage Service) is AWS's primary object storage service, used for storing and retrieving any amount of data."
    },
    {
      "id": 2,
      "text": "What service is used for serverless computing in AWS?",
-     "correctAnswer": "Lambda"
+     "correctAnswer": "Lambda",
+     "hint": {
+       "text": "This service allows you to run code without provisioning or managing servers."
+     },
+     "explanation": "AWS Lambda is a serverless computing service that runs code in response to events, automatically managing the compute resources."
    }
  ]
 }

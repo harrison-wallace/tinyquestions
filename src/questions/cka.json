@@ -9,12 +9,21 @@
        "A cluster node",
        "A configuration file"
      ],
-     "correctAnswer": "A group of containers that share resources"
+     "correctAnswer": "A group of containers that share resources",
+     "hint": {
+       "text": "A Pod is the smallest deployable unit in Kubernetes, typically containing one or more containers that share storage and network resources.",
+       "link": "https://kubernetes.io/docs/concepts/workloads/pods/"
+     },
+     "explanation": "Pods are the smallest deployable units in Kubernetes, designed to run multiple containers that need to share resources like storage and network namespaces."
    },
    {
      "id": 2,
      "text": "What command is used to list all pods in a namespace?",
-     "correctAnswer": "kubectl get pods"
+     "correctAnswer": "kubectl get pods",
+     "hint": {
+       "text": "This command uses the Kubernetes command-line tool to interact with the cluster."
+     },
+     "explanation": "The `kubectl get pods` command retrieves a list of all pods in the current namespace, displaying their status and other details."
    }
  ]
 }
